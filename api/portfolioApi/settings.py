@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'projectsApi',
-    'contact_requests'
+    'contactRequestsApi'
 ]
 
 MIDDLEWARE = [
