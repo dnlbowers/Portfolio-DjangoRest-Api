@@ -1,8 +1,7 @@
-from factory import DjangoModelFactory, Faker
+from factory import Faker, django
+from .models import ContactRequest
 
-from ..models import ContactRequest
-
-class ContactRequestFactory(DjangoModelFactory):
+class ContactRequestFactory(django.DjangoModelFactory):
     class Meta:
         model = ContactRequest
 
