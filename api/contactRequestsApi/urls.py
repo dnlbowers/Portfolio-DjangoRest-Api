@@ -3,9 +3,11 @@ from rest_framework import routers
 
 from .views import ContactRequestViewSet
 
+app_name = "contactRequestsApi"
+
 router = routers.DefaultRouter()
 
-router.register(r"api/contact-requests", ContactRequestViewSet, basename="contact-requests")
+router.register(r"contact-requests", ContactRequestViewSet, basename="contact-requests")
 
 urlpatterns = [
     path('', include(router.urls)),

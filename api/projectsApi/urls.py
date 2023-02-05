@@ -2,9 +2,11 @@ from django.urls import include, path
 from rest_framework import routers
 from . import views
 
+app_name = 'projectsApi'
+
 router = routers.DefaultRouter()
-router.register(r'api/projects', views.ProjectViewSet, basename='projects')
-router.register(r'api/upcomingprojects', views.UpcomingProjectViewSet, basename='upcomingprojects')
+router.register(r'projects', views.ProjectViewSet, basename='projects')
+router.register(r'upcomingprojects', views.UpcomingProjectViewSet, basename='upcomingprojects')
 
 urlpatterns = [
     path('', include(router.urls)),
