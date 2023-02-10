@@ -1,0 +1,9 @@
+Message from {{ contact.name }}
+
+Reason for contact = {{contact.reason}}
+
+Message: {{ contact.message }}
+
+Replay to contact on {{ contact.email }}
+
+
