@@ -143,13 +143,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = BASE_DIR/'staticfiles'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
 MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
-CLOUDINARY_STORAGE = {
+
+CLOUDINARY = {
     'CLOUD_NAME': os.environ.get("CLOUDINARY_CLOUD_NAME"),
     'API_KEY': os.environ.get("CLOUDINARY_API_KEY"),
     'API_SECRET': os.environ.get("CLOUDINARY_API_SECRET"),
