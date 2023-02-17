@@ -1,1 +1,1 @@
-You have an from {{contact.name}} email via dev-bowers 
+You have an email from {{contact.name}}  via dev-bowers.com
