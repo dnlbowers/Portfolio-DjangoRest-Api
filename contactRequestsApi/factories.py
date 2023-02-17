@@ -9,3 +9,4 @@ class ContactRequestFactory(django.DjangoModelFactory):
     email = Faker("email")
     reason = Faker("word")
     message = Faker("text")
+    created_at = Faker("date_time")

@@ -13,5 +13,6 @@ class ContactRequestSerializerTestCase(TestCase):
             "email": contact_request.email,
             "reason": contact_request.reason,
             "message": contact_request.message,
+            "created_at": contact_request.created_at.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             
         })
