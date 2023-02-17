@@ -21,7 +21,8 @@ class ContactRequest(models.Model):
         """
         Send request as email
         """
-        customer_email = self.email
+        my_email = settings.DEFAULT_FROM_EMAIL
+
         subject = render_to_string(
             'contactRequestsApi/email/email_subject.txt',
             {'contact': self})
@@ -32,11 +33,11 @@ class ContactRequest(models.Model):
         send_mail(
             subject,
             body,
-            settings.DEFAULT_FROM_EMAIL,
-            [customer_email]
+            self.email,
+            [my_email]
         )
         
 @receiver(post_save, sender=ContactRequest)
 def _post_save_receiver(sender, instance, **kwargs):
     """send an email when a contact request is created"""
-    instance._send_as_email()
+    sender._send_as_email(instance)
