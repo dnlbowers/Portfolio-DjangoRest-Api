@@ -38,4 +38,5 @@ class ContactRequest(models.Model):
         
 @receiver(post_save, sender=ContactRequest)
 def _post_save_receiver(sender, instance, **kwargs):
-    sender._send_as_email(instance)
+    """send an email when a contact request is created"""
+    instance._send_as_email()
