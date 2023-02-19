@@ -70,6 +70,8 @@ CORS_ORIGIN_WHITELIST = (
     'https://dev-bowers.com'
 )
 
+SITE_ID = 1
+
 ROOT_URLCONF = 'portfolioApi.urls'
 
 TEMPLATES = [
