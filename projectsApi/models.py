@@ -23,7 +23,7 @@ class Project(models.Model):
     )
     hosted_url = models.URLField(max_length=200, blank=True)
     repo_url = models.URLField(max_length=200, blank=True)
-    screenshot = CloudinaryField('image')
+    screenshot = models.ImageField(upload_to='portfolio/', null=True, blank=True)
     completion_date = models.DateField(blank=True, null=True)
 
     class meta:
