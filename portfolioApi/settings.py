@@ -67,7 +67,8 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:4200',
     'https://portfoliosite.dev-bowers.com',
-    'https://dev-bowers.com'
+    'https://dev-bowers.com',
+    'https://www.dev-bowers.com'
 )
 
 SITE_ID = 1
